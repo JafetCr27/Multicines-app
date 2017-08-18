@@ -13,24 +13,41 @@
 
       </div>
     </div>
-    <div class="parallax"><img src="./img/cine3.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="img/cine3.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
- <div class="">
-    <div class="section">
-			<!--<div ng-controller="FirstController" class="card-panel #f57c00 orange darken-2">
-				<h3 class="center animated bounceInLeft white-text">{{cartelera}}</h3>
-				<ul class="no-list">
-					<li ng-repeat="peli in pelis">
-						<img src="{{peli.title}}">{{peli.title}}/>
-					</li>
-				</ul>
-			</div>-->
-		<hr/>
-      <!--   Icon Section   -->
-		<div class="row">
+ <div class="container">
+	 <div class="row">
+			<input type="text" ng-model="peliSelect">
+			<div class="col s12 m3" ng-repeat="peli in pelis | filter: peliSelect" >
+					<div class="card hoverable small">
+						<div class="card-image">
+						<img class="responsive-img" src="{{peli.imagenUrl}}">
+					</div>
+						<div class="card-content">
+						<p><strong>Nombre </strong>{{peli.title}}</p>
+						<p><strong>Fecha de estreno: </strong><p>14 abril 2017</p>
+						<strong>Sinopsis: </strong> <p>{{peli.description}}}</p>
+					</div>
+					<div class="card-action">
+						<a href="#">Comprar boleto!</a>
+					</div>
+				</div>
+			</div>
+	 </div>
+
+
+
+
+
+
+
+
+
+
+		<!--div class="row">
 			<div class="col s12 m3">
-				<div class="card hoverable">
+				<div class="card hoverable small">
 					<div class="card-image">
 					<img class="materialboxed" src="img/guardianes.jpg">
 					</div>
@@ -45,7 +62,7 @@
 				</div>
 			</div>
 			<div class="col s12 m3">
-				<div class="card hoverable">
+				<div class="card hoverable small">
 					<div class="card-image">
 					<img class="materialboxed" src="img/f8.jpg">
 					</div>
@@ -60,7 +77,7 @@
 				</div>
 			</div>
 			<div class="col s12 m3">
-				<div class="card hoverable">
+				<div class="card hoverable small">
 					<div class="card-image">
 					<img class="materialboxed" src="img/baby.jpg">
 					</div>
@@ -75,7 +92,7 @@
 				</div>
 			</div>
 			<div class="col s12 m3">
-				<div class="card hoverable">
+				<div class="card hoverable small">
 					<div class="card-image">
 					<img class="materialboxed" src="img/alien.jpg">
 					</div>
@@ -91,7 +108,7 @@
 			</div>
 		</div>
 
-    </div>
+    </div-->
   </div>
 
 
@@ -110,26 +127,7 @@
 		<hr/>
       <!--   Icon Section   -->
 		<div class="row">
-			<ul>
-				<li ng-repeat="peli in pelis">
-					<h1>{{peli}}</h1>
-					<div class="col s12 m3">
-						<div class="card hoverable">
-							<div class="card-image">
-							<img class="materialboxed" src="img/guardianes.jpg">
-							</div>
-						<div class="card-content">
-							<p><strong>Nombre </strong>Guardianes de la Galaxia Vol 2</p>
-							<p><strong>Fecha de estreno: </strong>14 abril 2017</p>
-							<strong>Sinopsis: </strong>
-						</div>
-						<div class="card-action">
-							<a href="#">Comprar boleto!</a>
-						</div>
-						</div>
-					</div>
-				</li>
-			</ul>
+			
 <!--
 			<div class="col s12 m3">
 				<div class="card hoverable">
@@ -204,8 +202,6 @@
 		</div>
     </div>
   </div>
-
-
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
@@ -216,4 +212,10 @@
     </div>
     <div class="parallax"><img class="responsive-img" src="img/tama.jpg" alt="Unsplashed background img 3"></div>
   </div>
-	
+	<script>
+	$(document).ready(() => {
+		   $('.slider').slider();
+  $('.button-collapse').sideNav();
+  $('.parallax').parallax();
+});
+</script>

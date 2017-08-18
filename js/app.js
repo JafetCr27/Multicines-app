@@ -1,3 +1,9 @@
+$(document).ready(function(){
+    $('.slider').slider();
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+
+});
 angular.module("MulticinesApp",["ngRoute"])
     .config(['$locationProvider', '$routeProvider',
         function config($locationProvider, $routeProvider) {
@@ -5,8 +11,8 @@ angular.module("MulticinesApp",["ngRoute"])
 
             $routeProvider.
                 when('/', {
-                controller:"FirstController",
-                templateUrl: "views/home.html"
+                    controller:"MainController",
+                    templateUrl: "views/home.html"
                 })
             }
     ]);
