@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="Multicines">
+<html lang="en" ng-app="MulticinesApp">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <title>Multicines Liberia</title>
-
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/animate.css" type="text/css" rel="stylesheet"/>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
 </head>
 <body style="background-color:#eee;">
   <div class="navbar-fixed">
@@ -37,239 +41,8 @@
       </div>
     </nav>
   </div>
-  
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center">Veni a Multicines!!</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">La mejor experiencia de cine en Liberia</h5>
-        </div>
-        <div class="row center">
-          <a href="#" id="download-button" class="btn-large waves-effect waves-light #4a148c purple darken-4">Comprar ticket!</a>
-        </div>
-        <br><br>
+    	<div ng-view></div>
 
-      </div>
-    </div>
-    <div class="parallax"><img src="img/cine3.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-
-
- 
-  <div class="fixed-action-btn horizontal">
-    <a class="btn-floating btn-large red">
-      <i class="large material-icons">mode_edit</i>
-    </a>
-    <ul>
-      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-    </ul>
-  </div>
-
- <div class="">
-    <div class="section">
-			<div ng-controller="FirstController" class="card-panel #f57c00 orange darken-2">
-				<h3 class="center animated bounceInLeft white-text">{{cartelera}}</h3>
-				<ul class="no-list">
-					<li ng-repeat="peli in pelis">
-						<h1>{{peli.title}}</h1>
-					</li>
-				</ul>
-			</div>
-		<hr/>
-      <!--   Icon Section   -->
-		<div class="row">
-			<div class="col s12 m3">
-				<div class="card hoverable">
-					<div class="card-image">
-					<img class="materialboxed" src="img/guardianes.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Guardianes de la Galaxia Vol 2</p>
-					<p><strong>Fecha de estreno: </strong>14 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>
-			<div class="col s12 m3">
-				<div class="card hoverable">
-					<div class="card-image">
-					<img class="materialboxed" src="img/f8.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Rápidos y furiosos 8</p>
-					<p><strong>Fecha de estreno: </strong>14 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>
-			<div class="col s12 m3">
-				<div class="card hoverable">
-					<div class="card-image">
-					<img class="materialboxed" src="img/baby.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Un Jefe en pañales</p>
-					<p><strong>Fecha de estreno: </strong>13 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>
-			<div class="col s12 m3">
-				<div class="card hoverable">
-					<div class="card-image">
-					<img class="materialboxed" src="img/alien.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Alien Covenant</p>
-					<p><strong>Fecha de estreno: </strong>14 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>
-		</div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="img/cine2.png" alt="Unsplashed background img 2"></div>
-  </div>
- <div class="container">
-    <div class="section">
-		<h2 class="center animated bounceInLeft">Proximos estrenos!</h2>
-		<hr/>
-      <!--   Icon Section   -->
-		<div class="row">
-			<ul>
-				<li ng-repeat="peli in pelis">
-					<h1>{{peli}}</h1>
-					<div class="col s12 m3">
-						<div class="card hoverable">
-							<div class="card-image">
-							<img class="materialboxed" src="img/guardianes.jpg">
-							</div>
-						<div class="card-content">
-							<p><strong>Nombre </strong>Guardianes de la Galaxia Vol 2</p>
-							<p><strong>Fecha de estreno: </strong>14 abril 2017</p>
-							<strong>Sinopsis: </strong>
-						</div>
-						<div class="card-action">
-							<a href="#">Comprar boleto!</a>
-						</div>
-						</div>
-					</div>
-				</li>
-			</ul>
-<!--
-			<div class="col s12 m3">
-				<div class="card hoverable">
-					<div class="card-image">
-					<img class="materialboxed" src="img/f8.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Rápidos y furiosos 8</p>
-					<p><strong>Fecha de estreno: </strong>14 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>
-			<div class="col s12 m3">
-				<div class="card hoverable">
-					<div class="card-image">
-					<img class="materialboxed" src="img/baby.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Un Jefe en pañales</p>
-					<p><strong>Fecha de estreno: </strong>13 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>
-			<div class="col s12 m3">
-				<div class="card hoverable">
-					<div class="card-image">
-					<img class="materialboxed" src="img/alien.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Alien Covenant</p>
-					<p><strong>Fecha de estreno: </strong>14 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>-->
-		</div>
-    </div>
-  </div>
-  
-  <div class="container">
-    <div class="section">
-		<div class="row">
-			<div class="col s12">
-				<div class="slider">
-					<ul class="slides">
-						<li>
-							<img src="img/weblentesninos.png">
-						</li>
-						<li>
-							<img src="img/horario-web-multisnacks.png">
-						</li>
-						<li>
-							<img src="img/preciosweb.png">
-						</li>
-						<li>
-							<img src="img/webcensura-1.png">
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light left-align">Muy pronto !!!</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img class="responsive-img" src="img/tama.jpg" alt="Unsplashed background img 3"></div>
-  </div>
 
   <footer class="page-footer">
     <div class="container">
@@ -303,6 +76,7 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+	<script src="js/app.js"></script>  
   <script src="js/controller.js"></script>
   <script>
     $(document).ready(function(){
