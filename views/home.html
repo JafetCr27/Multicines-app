@@ -1,221 +1,114 @@
- <div id="index-banner" class="parallax-container">
+<div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center">Veni a Multicines!!</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">La mejor experiencia de cine en Liberia</h5>
-        </div>
-        <div class="row center">
-          <a href="#" id="download-button" class="btn-large waves-effect waves-light #4a148c purple darken-4">Comprar ticket!</a>
-        </div>
-        <br><br>
+        <div class="container">
+            <br><br>
+            <h1 class="header center">Veni a Multicines!!</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">La mejor experiencia de cine en Liberia</h5>
+            </div>
+            <div class="row center">
+                <a href="#" id="download-button" class="btn-large waves-effect waves-light #4a148c purple darken-4">Comprar ticket!</a>
+            </div>
+            <br><br>
 
-      </div>
+        </div>
     </div>
     <div class="parallax"><img src="img/cine3.jpg" alt="Unsplashed background img 1"></div>
-  </div>
+</div>
 
- <div class="container">
-	 <div class="row">
-			<input type="text" ng-model="peliSelect">
-			<div class="col s12 m3" ng-repeat="peli in pelis | filter: peliSelect" >
-					<div class="card hoverable small">
-						<div class="card-image">
-						<img class="responsive-img" src="{{peli.imagenUrl}}">
-					</div>
-						<div class="card-content">
-						<p><strong>Nombre </strong>{{peli.title}}</p>
-						<p><strong>Fecha de estreno: </strong><p>14 abril 2017</p>
-						<strong>Sinopsis: </strong> <p>{{peli.description}}}</p>
-					</div>
-					<div class="card-action">
-						<a href="#">Comprar boleto!</a>
-					</div>
-				</div>
-			</div>
-	 </div>
-
-
-
-
-
-
-
-
-
-
-		<!--div class="row">
-			<div class="col s12 m3">
-				<div class="card hoverable small">
-					<div class="card-image">
-					<img class="materialboxed" src="img/guardianes.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Guardianes de la Galaxia Vol 2</p>
-					<p><strong>Fecha de estreno: </strong>14 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>
-			<div class="col s12 m3">
-				<div class="card hoverable small">
-					<div class="card-image">
-					<img class="materialboxed" src="img/f8.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Rápidos y furiosos 8</p>
-					<p><strong>Fecha de estreno: </strong>14 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>
-			<div class="col s12 m3">
-				<div class="card hoverable small">
-					<div class="card-image">
-					<img class="materialboxed" src="img/baby.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Un Jefe en pañales</p>
-					<p><strong>Fecha de estreno: </strong>13 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>
-			<div class="col s12 m3">
-				<div class="card hoverable small">
-					<div class="card-image">
-					<img class="materialboxed" src="img/alien.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Alien Covenant</p>
-					<p><strong>Fecha de estreno: </strong>14 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>
-		</div>
-
-    </div-->
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
+<div class="container">
+    <div class="row">
+        <div class="input-field col s6 m6">
+            <input type="text" ng-model="peliSelect">
+            <label for="Buscar pelicula">Buscar pelicula</label>
         </div>
-      </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m4" ng-repeat="peli in pelis | filter: peliSelect">
+            <div class="card horizontal hoverable">
+                <div class="card-image">
+                    <img src="{{peli.imagenUrl}}">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col s12 m12 center">
+                                <a href="#"><strong>{{peli.title}}</strong></a>
+                                <p><strong>{{peli.date| date:'MM/dd/yyyy'}}</strong></p>
+                            </div>
+                            <!--div class="col s12 m12 center">
+                            </div>
+                            <p><strong>Sinopsis: </strong> {{peli.description}}</p-->
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <div class="row">
+                            <div>
+                                <a href="#" style="margin: 0"><i class="material-icons left">receipt</i><strong>Comprar</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+            </div>
+        </div>
     </div>
     <div class="parallax"><img src="img/cine2.png" alt="Unsplashed background img 2"></div>
-  </div>
- <div class="container">
+</div>
+<div class="container">
     <div class="section">
-		<h2 class="center animated bounceInLeft">Proximos estrenos!</h2>
-		<hr/>
-      <!--   Icon Section   -->
-		<div class="row">
-			
-<!--
-			<div class="col s12 m3">
-				<div class="card hoverable">
-					<div class="card-image">
-					<img class="materialboxed" src="img/f8.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Rápidos y furiosos 8</p>
-					<p><strong>Fecha de estreno: </strong>14 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>
-			<div class="col s12 m3">
-				<div class="card hoverable">
-					<div class="card-image">
-					<img class="materialboxed" src="img/baby.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Un Jefe en pañales</p>
-					<p><strong>Fecha de estreno: </strong>13 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>
-			<div class="col s12 m3">
-				<div class="card hoverable">
-					<div class="card-image">
-					<img class="materialboxed" src="img/alien.jpg">
-					</div>
-				<div class="card-content">
-					<p><strong>Nombre </strong>Alien Covenant</p>
-					<p><strong>Fecha de estreno: </strong>14 abril 2017</p>
-					<strong>Sinopsis: </strong>
-				</div>
-				<div class="card-action">
-					<a href="#">Comprar boleto!</a>
-				</div>
-				</div>
-			</div>-->
-		</div>
+        <h2 class="center animated bounceInLeft">Proximos estrenos!</h2>
+        <hr/>
     </div>
-  </div>
-  
-  <div class="container">
+</div>
+
+<div class="container">
     <div class="section">
-		<div class="row">
-			<div class="col s12">
-				<div class="slider">
-					<ul class="slides">
-						<li>
-							<img src="img/weblentesninos.png">
-						</li>
-						<li>
-							<img src="img/horario-web-multisnacks.png">
-						</li>
-						<li>
-							<img src="img/preciosweb.png">
-						</li>
-						<li>
-							<img src="img/webcensura-1.png">
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-    </div>
-  </div>
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light left-align">Muy pronto !!!</h5>
+        <div class="row">
+            <div class="col s12">
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="img/weblentesninos.png">
+                        </li>
+                        <li>
+                            <img src="img/horario-web-multisnacks.png">
+                        </li>
+                        <li>
+                            <img src="img/preciosweb.png">
+                        </li>
+                        <li>
+                            <img src="img/webcensura-1.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
+</div>
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h5 class="header col s12 light left-align">Muy pronto !!!</h5>
+            </div>
+        </div>
     </div>
     <div class="parallax"><img class="responsive-img" src="img/tama.jpg" alt="Unsplashed background img 3"></div>
-  </div>
-	<script>
-	$(document).ready(() => {
-		   $('.slider').slider();
-  $('.button-collapse').sideNav();
-  $('.parallax').parallax();
-});
+</div>
+<script>
+    $(document).ready(() => {
+        $('.slider').slider();
+        $('.button-collapse').sideNav();
+        $('.parallax').parallax();
+    });
 </script>

@@ -1,94 +1,86 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="MulticinesApp">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Multicines Liberia</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Multicines Liberia</title>
 
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/material.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-    
-  <script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 
     <!-- CSS  -->
-  
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/style.css" type="text/css" rel="stylesheet"/>
-  <link href="css/animate.css" type="text/css" rel="stylesheet"/>
 
-	<script src="js/app.js"></script>  
-  <script src="js/controller.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link href="css/animate.css" type="text/css" rel="stylesheet" />
 
-  
-  
-	
-	
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+
 </head>
+
 <body style="background-color:#eee;">
-  <div class="navbar-fixed">
-    <nav class="white" role="navigation">
-      <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">
-          <img class="responsive-img" src="img/logo1.png" />
-        </a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Cartelera</a></li>
-          <li><a href="#">¿Quiénes somos?</a></li>
-          <li><a href="#">Contactenos</a></li>
-          <li><a href="#">Iniciar sesión</a></li>
-        </ul>
+    <div class="navbar-fixed">
+        <nav class="white" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="#" class="brand-logo right ">
+                    <img class="responsive-img" src="img/logo1.png" />
+                </a>
+                <ul class="left hide-on-med-and-down">
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li><a href="#!/confiteria">Confiteria</a></li>
+                    <li><a href="#quienes">¿Quiénes somos?</a></li>
+                    <li><a href="#contactenos">Contactenos</a></li>
+                    <li><a href="#login">Iniciar sesión</a></li>
+                </ul>
 
-        <ul id="nav-mobile" class="side-nav">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Cartelera</a></li>
-          <li><a href="#">¿Quiénes somos?</a></li>
-          <li><a href="#">Contactenos</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons" style="color:#f4b168;">menu</i></a>
-      </div>
-    </nav>
-  </div>
-    	<div ng-view></div>
-
-
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Acerca de</h5>
-          <p class="white-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
-        <div class="col l6 s12">
-          <h5 class="white-text">Sitios internos</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Inicio</a></li>
-            <li><a class="white-text" href="#!">Cartelera</a></li>
-            <li><a class="white-text" href="#!">¿Quiénes somos?</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#confiteria">Cartelera</a></li>
+                    <li><a href="#">¿Quiénes somos?</a></li>
+                    <li><a href="#">Contactenos</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons" style="color:#f4b168;">menu</i></a>
+            </div>
+        </nav>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Desarrollado por: <a class="brown-text text-lighten-3" href="#">Jafet Barrera</a>
-      </div>
-    </div>
-  </footer>
-  <!--  Scripts-->
-  
 
-  <script>
-  
-  </script>
-  </body>
+    <div ng-view></div>
+
+    <!--footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Acerca de</h5>
+                    <p class="white-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+                </div>
+                <div class="col l6 s12">
+                    <h5 class="white-text">Sitios internos</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Inicio</a></li>
+                        <li><a class="white-text" href="#!">Cartelera</a></li>
+                        <li><a class="white-text" href="#!">¿Quiénes somos?</a></li>
+                        <li><a class="white-text" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Desarrollado por: <a class="brown-text text-lighten-3" href="#">Jafet Barrera</a>
+            </div>
+        </div>
+    </footer-->
+</body>
+
 </html>
