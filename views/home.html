@@ -25,7 +25,7 @@
                 <option value="2">Multicines Tamarindo</option>
             </select>
         </div>
-        <div class="input-field col s6 m6">
+        <div class="input-field col s12 m6">
             <i class="material-icons prefix">search</i>
             <input id="icon_prefix" type="text" class="validate" ng-model="peliSelect">
             <label for="icon_prefix">Buscar pelicula</label>
@@ -63,7 +63,7 @@
 </div>
 
 
-<!--div class="parallax-container valign-wrapper">
+<div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
         <div class="container">
             <div class="row center">
@@ -71,11 +71,30 @@
         </div>
     </div>
     <div class="parallax"><img src="img/cine2.png" alt="Unsplashed background img 2"></div>
-</div-->
-<div class="container">
-    <div class="section">
-        <h4 class="center animated bounceInLeft">Proximos estrenos!</h4>
-        <hr/>
+</div>
+<div class="">
+    <div class="row">
+        <h5 class="center">Nuestras promociones</h5>
+        <hr>
+        <div class="col s12 m6">
+            <ul class="collapsible popout" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons" style="color: #ee8a1e">filter_drama</i>Funcion matine</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons" style="color: #4a148c ">today</i>Precio especial</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons" style="color:#f99b37">whatshot</i>Third</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="col s12 m6">
+            <img class="materialboxed responsive-img" width="650" src="./img/preciosweb.png" />
+        </div>
     </div>
 </div>
 
@@ -115,9 +134,17 @@
 </div>
 <script>
     $(document).ready(() => {
+        $('.materialboxed').materialbox();
         $('select').material_select();
         $('.slider').slider();
         $('.button-collapse').sideNav();
         $('.parallax').parallax();
+        $('.collapsible').collapsible('open', 0);
+
+        // Close
+        $('.collapsible').collapsible('close', 0);
+
+        // Destroy
+        $('.collapsible').collapsible('destroy');
     });
 </script>
