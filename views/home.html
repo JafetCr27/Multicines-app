@@ -1,3 +1,18 @@
+<style>
+    .ocultar {
+        opacity: 1;
+        max-height: auto;
+        overflow: hidden;
+        transition: all 5s;
+    }
+    
+    .ocultar.ng-hide {
+        opacity: 0;
+        max-height: 0px !important;
+        overflow: hidden;
+        display: block !important;
+    }
+</style>
 <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
         <div class="container">
@@ -31,28 +46,45 @@
             <label for="icon_prefix">Buscar pelicula</label>
         </div>
     </div>
-    <div class="row">
-        <div class="col s12 m4" ng-repeat="peli in pelis | filter: peliSelect">
-            <div class="card horizontal hoverable animated bounceInLeft">
-                <div class="card-image">
-                    <img src="{{peli.imagenUrl}}">
+    <div ng-show="loading" class="center">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
                 </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <div class="row">
-                            <div class="col s12 m12 center">
-                                <a href="#"><strong>{{peli.title}}</strong></a>
-                                <p><strong>{{peli.date| date:'MM/dd/yyyy'}}</strong></p>
-                            </div>
-                            <!--div class="col s12 m12 center">
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-show="pelis.length > 0" class="ocultar">
+        <div class="row">
+            <div class="col s12 m4" ng-repeat="peli in pelis | filter: peliSelect">
+                <div class="card horizontal hoverable animated bounceInLeft">
+                    <div class="card-image">
+                        <img src="{{peli.imagenUrl}}">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12 m12 center">
+                                    <a href="#"><strong>{{peli.title}}</strong></a>
+                                    <p><strong>{{peli.date| date:'MM/dd/yyyy'}}</strong></p>
+                                </div>
+                                <!--div class="col s12 m12 center">
                             </div>
                             <p><strong>Sinopsis: </strong> {{peli.description}}</p-->
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-action">
-                        <div class="row">
-                            <div>
-                                <a href="#" style="margin: 0"><i class="material-icons left">receipt</i><strong>Comprar</strong></a>
+                        <div class="card-action">
+                            <div class="row">
+                                <div>
+                                    <a href="#" style="margin: 0"><i class="material-icons left">receipt</i><strong>Comprar</strong></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -60,6 +92,7 @@
             </div>
         </div>
     </div>
+
 </div>
 
 
