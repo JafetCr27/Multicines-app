@@ -11,6 +11,10 @@ angular.module("MulticinesApp", ["ngRoute"])
                 controller: "confiController",
                 templateUrl: "views/confi.html"
             }).
+            when('/quienesSomos', {
+                controller: "quienesSomosController",
+                templateUrl: "views/quienesSomos.html"
+            }).
             otherwise('/');
         }
     ]);

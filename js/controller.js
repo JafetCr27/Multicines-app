@@ -18,4 +18,6 @@ angular.module("MulticinesApp")
 
     }).controller("confiController", function($scope) {
 
+    }).controller("quienesSomosController", function($scope) {
+
     });
