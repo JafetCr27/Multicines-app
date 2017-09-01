@@ -34,18 +34,18 @@
             </a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons orange-text">menu</i></a>
             <ul class="left hide-on-med-and-down">
-                <li class="active"><a href="#">Inicio</a></li>
-                <li><a href="#!/confiteria">Confiteria</a></li>
+                <li class="active"><a href="#"><i class="material-icons left">home</i>Inicio</a></li>
+                <li><a href="#!/confiteria"><i class="material-icons left">restaurant</i>Confiteria</a></li>
                 <li><a href="#!/quienesSomos">¿Quiénes somos?</a></li>
-                <li><a href="#contactenos">Contactenos</a></li>
-                <li><a href="#login">Iniciar sesión</a></li>
+                <li><a href="#contactenos"><i class="material-icons left">location_on</i>Contactenos</a></li>
+                <li><a href="#login"><i class="material-icons left">account_box</i>Iniciar sesión</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-                <li class="active"><a href="#">Inicio</a></li>
-                <li><a href="#!/confiteria">Confiteria</a></li>
-                <li><a href="#!/quienesSomos">¿Quiénes somos?</a></li>
-                <li><a href="#contactenos">Contactenos</a></li>
-                <li><a href="#login">Iniciar sesión</a></li>
+                <li><a href="#!/home"><i class="material-icons left orange-text">home</i>Inicio</a></li>
+                <li><a href="#!/confiteria"><i class="material-icons left purple-text">restaurant</i>Confiteria</a></li>
+                <li><a href="#!/quienesSomos"><i class="material-icons left red-text">group_work</i>¿Quiénes somos?</a></li>
+                <li><a href="#contactenos"><i class="material-icons left blue-text">location_on</i>Contactenos</a></li>
+                <li><a href="#login"><i class="material-icons left green-text">account_box</i>Iniciar sesión</a></li>
             </ul>
         </div>
     </nav>
@@ -66,7 +66,9 @@
                     <ul>
                         <li><a class="white-text" href="#">Inicio</a></li>
                         <li><a class="white-text" href="#!/confiteria">Confiteria</a></li>
-                        <li><a class="white-text" href="#!/quienesSomos">¿Quiénes somos?</a></li>
+                        <li>
+                            <a class="white-text" href="#!/quienesSomos"></i>¿Quiénes somos?</a>
+                        </li>
                         <li><a class="white-text" href="#contactenos">Contactenos</a></li>
                         <li><a class="white-text" href="#login">Iniciar sesión</a></li>
                     </ul>
@@ -82,6 +84,8 @@
 </body>
 <script>
     $(".button-collapse").sideNav();
+    $('.button-collapse').sideNav('hide');
+    $('.button-collapse').sideNav('destroy');
 </script>
 
-</html>y
+</html>
