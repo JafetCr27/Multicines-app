@@ -2210,8 +2210,9 @@ dfn {
 }
 
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0
+    font-size: 1em;
+    margin: 0;
+    color: #fff;
 }
 
 mark {
@@ -4181,7 +4182,7 @@ nav ul a {
     -webkit-transition: background-color .3s;
     transition: background-color .3s;
     font-size: 1rem;
-    color: #fff;
+    color: #212121;
     display: block;
     padding: 0 15px;
     cursor: pointer
@@ -4347,7 +4348,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 400;
+    font-weight: 350;
     line-height: 1.1
 }
 
@@ -4368,7 +4369,7 @@ h1 {
 
 h2 {
     font-size: 3.56rem;
-    line-height: 110%;
+    line-height: 100%;
     margin: 1.78rem 0 1.424rem 0
 }
 
@@ -4387,7 +4388,8 @@ h4 {
 h5 {
     font-size: 1.64rem;
     line-height: 110%;
-    margin: .82rem 0 .656rem 0
+    margin: .82rem 0 .656rem 0;
+    color: #fff;
 }
 
 h6 {

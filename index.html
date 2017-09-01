@@ -19,21 +19,45 @@
     <!-- CSS  -->
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <!--link href="css/style.css" type="text/css" rel="stylesheet" /-->
     <link href="css/animate.css" type="text/css" rel="stylesheet" />
-
     <script src="js/app.js"></script>
     <script src="js/controller.js"></script>
 
 </head>
 
 <body style="background-color:#eee;">
-    <div class="navbar-fixed">
+    <nav class="white">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#!/" class="brand-logo right ">
+                <img class="responsive-img" src="img/logo1.png" />
+            </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons orange-text">menu</i></a>
+            <ul class="left hide-on-med-and-down">
+                <li class="active"><a href="#">Inicio</a></li>
+                <li><a href="#!/confiteria">Confiteria</a></li>
+                <li><a href="#!/quienesSomos">¿Quiénes somos?</a></li>
+                <li><a href="#contactenos">Contactenos</a></li>
+                <li><a href="#login">Iniciar sesión</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li class="active"><a href="#">Inicio</a></li>
+                <li><a href="#!/confiteria">Confiteria</a></li>
+                <li><a href="#!/quienesSomos">¿Quiénes somos?</a></li>
+                <li><a href="#contactenos">Contactenos</a></li>
+                <li><a href="#login">Iniciar sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--div class="navbar-fixed">
         <nav class="white" role="navigation">
             <div class="nav-wrapper container">
-                <a id="logo-container" href="#" class="brand-logo right ">
+                <a id="logo-container" href="#!/" class="brand-logo right ">
                     <img class="responsive-img" src="img/logo1.png" />
                 </a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
                 <ul class="left hide-on-med-and-down">
                     <li class="active"><a href="#">Inicio</a></li>
                     <li><a href="#!/confiteria">Confiteria</a></li>
@@ -42,16 +66,15 @@
                     <li><a href="#login">Iniciar sesión</a></li>
                 </ul>
 
-                <ul id="nav-mobile" class="side-nav">
+                <ul class="side-nav" id="mobile-demo">
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#!/confiteria">Confiteria</a></li>
-                    <li><a href="#">¿Quiénes somos?</a></li>
-                    <li><a href="#">Contactenos</a></li>
+                    <li><a href="#!/quienesSomos">¿Quiénes somos?</a></li>
+                    <li><a href="https://www.youtube.com">Contactenos</a></li>
                 </ul>
-                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons" style="color:#f4b168;">menu</i></a>
             </div>
         </nav>
-    </div>
+    </div-->
 
     <div ng-view></div>
 
@@ -82,5 +105,8 @@
         </div>
     </footer>
 </body>
+<script>
+    $(".button-collapse").sideNav();
+</script>
 
 </html>
