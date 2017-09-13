@@ -1,6 +1,5 @@
 angular.module("MulticinesApp")
     .controller("MainController", function($scope, $http) {
-        $scope.cartelera = "En cartelera!";
         $scope.loading = true;
         $http({
             method: 'GET',
@@ -9,11 +8,10 @@ angular.module("MulticinesApp")
             $scope.pelis = [];
             $scope.pelis = response.data.products;
             $scope.loading = false;
-            console.log(response.data.products);
 
         }, function errorCallback(response) {
             $scope.loading = false;
-
+            console.log("loading" + $scope.loading);
         });
 
     }).controller("confiController", function($scope) {
